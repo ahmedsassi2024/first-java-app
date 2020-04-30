@@ -11,30 +11,13 @@ public class Main {
 			Bateau b3 = new Bateau(p1);
 			Bateau b2 = new Bateau(p3);
 			
-			
 			b1.quitter();
 			b1.accoster(p2);
 			
-			
-			
 			System.out.println(b1.distance());
 			
-		//	System.out.println("le bateau est àa la quai num :p " +b2.numQuai);
-		//	p1.retirerBateau(b1);
-			
-			
-			
-			
-		p1.afficherQuai();
-	//	p2.afficherQuai();
-	//	p3.afficherQuai();
-			
-			
 		
-		
+			p1.afficherQuai();
 			
-			
-
-				
 	}
 }
