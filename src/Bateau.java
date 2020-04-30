@@ -10,7 +10,7 @@ public class Bateau {
 		System.out.println("bateau en mer: creation defaut");
 	}
 	
-	public Bateau(Port p) { //////// constructeur
+	public Bateau(Port p) { //////// constructeu r
 		if(p.ajouterBateau(this))  {
 			enMer = false;
 			portDepart = p;

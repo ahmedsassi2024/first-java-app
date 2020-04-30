@@ -2,11 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-
 public class Port {
-	
 	public float x,y;
-	
 	private int nbQuais,quaisOcc;
 	Map<Integer, String> quai = new HashMap<Integer, String>();
 	
@@ -78,5 +75,4 @@ public class Port {
 	public float retournerY(){
 		return this.y;
 	}
-	
 }
