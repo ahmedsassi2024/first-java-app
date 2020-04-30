@@ -4,20 +4,23 @@ public class Bateau {
 	public Port portArrivee;
 	public boolean enMer;
 	public int numQuai;
+	private String nomBateau;
 
 	public Bateau() { //////// constructeur
 		enMer = true;
-		System.out.println("bateau en mer: creation defaut");
+		System.out.println("Nouveau bateau inconnue en mer: creation defaut");
 	}
 	
-	public Bateau(Port p) { //////// constructeur aa
+	public Bateau(String nomBateau,Port p) { //////// constructeur aa
 		if(p.ajouterBateau(this))  {
 			enMer = false;
 			portDepart = p;
+			this.nomBateau = nomBateau;
+			System.out.println("le bateau "+nomBateau+" est cree et placé au port "+p.nomPort);
 		}
 		else{
 			enMer = true;
-			System.out.println("le bateau est en mer : port complet");
+			System.out.println("le bateau "+nomBateau+" est en mer : port complet");
 		}
 		
 	}

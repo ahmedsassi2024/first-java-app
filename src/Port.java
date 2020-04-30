@@ -5,28 +5,31 @@ import java.util.Map.Entry;
 public class Port {
 	public float x,y;
 	private int nbQuais,quaisOcc;
+	public String nomPort;
 	Map<Integer, String> quai = new HashMap<Integer, String>();
 	
-	public Port(float x1,float y1){				////////constructeur
+	public Port(float x1,float y1,String nomPort){				////////constructeur
 		this.x = x1;
 		this.y = y1;
+		this.nomPort = nomPort;
 		for (int i = 1; i < 3 + 1; i++) {
 			quai.put(i, "libre");
 		}
 		nbQuais = 3;
 		quaisOcc = 0;
-		System.out.println("creation d un port de 3 quai par defaut ");
+		System.out.println("creation du port "+nomPort+" avec 3 quais");
 	}
 	
-	public Port(float x1,float y1,int nbQuais){	////////constructeur
+	public Port(float x1,float y1,String nomPort,int nbQuais){	////////constructeur
 		this.x = x1;
 		this.y = y1;
 		if (nbQuais > 0) {
 			for (int i = 1; i < nbQuais + 1; i++) {
 				quai.put(i, "libre");
 			}
-			System.out.println("creation de " + nbQuais + " quais");
+			System.out.println("creation du port " +nomPort+" avec "+ nbQuais + " quais");
 			this.nbQuais = nbQuais;
+			this.nomPort = nomPort;
 			quaisOcc = 0;
 		} else {
 			for (int i = 1; i < 3 + 1; i++) {
